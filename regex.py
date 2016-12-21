@@ -1,7 +1,8 @@
 import re
 
 def clean(text):
-    remove = re.split(r'[^\w\'?\w\$]', text)
+    remove = re.sub(r'[^\w\'?\w\$]', '', text)
+
     return remove
 
 
