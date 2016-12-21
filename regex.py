@@ -1,7 +1,7 @@
 import re
 
 def clean(text):
-    remove = re.split(r'[^A-z0-9]', text)
+    remove = re.split(r'[^\w]', text)
     return remove
 
 
