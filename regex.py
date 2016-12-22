@@ -8,6 +8,7 @@ def clean(text):
     matches = regex.findall(text)
     sentences = []
     for match in matches:
+        sentences.append(match)
 
     return sentences
 
