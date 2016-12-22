@@ -1,10 +1,9 @@
 import re
 
 def clean(text):
-    remove = re.sub(r'(^[\w]+[\'\-]?[\w]*)', '', text).split()
-    for word in remove:
-        if word is "hadn't":
-            print word
+    remove = re.sub(r'(^[\w]+[\'\-]?[\w]*)|(^(?:[\w]+[\'\-]?[\w]*[\'\-]?)+)', '', text).split()
+    # remove = re.sub(r'[^\w\'?\w\$\s]', '', text).split()
+
 
     return remove
 
@@ -16,4 +15,4 @@ if __name__ == '__main__':
         filename = sys.argv[1]
         source = open(filename).read()
         clean = clean(source)
-        # print clean
+        print clean
