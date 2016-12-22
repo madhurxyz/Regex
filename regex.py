@@ -1,9 +1,9 @@
 import re
 
 def clean(text):
-    # remove = re.sub(r'(?:(?:(^[\w]+[\'\-]?[\w]*))|(^(?:[\w]+[\'\-]?[\w]*[\'\-]?)+)|(^(?:[\$]?[\w]+[\'\-]?[\w]*)+))', '', text).split()
+    remove = re.sub(r'(?:(?:(^[\w]+[\'\-]?[\w]*))|(^(?:[\w]+[\'\-]?[\w]*[\'\-]?)+)|(^(?:[\$]?[\w]+[\'\-]?[\w]*)+))', '', text).split()
     # remove = re.sub(r'[^\w\'?\w\$\s]', '', text).split()
-    remove = re.sub(r'(^[\w\'?\w]*[\$\s])', '', text).split()
+    # remove = re.sub(r'(^[\w\'?\w]*[\$\s])', '', text).split()
 
 
     return remove
