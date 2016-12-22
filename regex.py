@@ -6,9 +6,10 @@ def clean(text):
     remove = re.sub(r'(?:(?:(^[\w]+[\'\-]?[\w]*))|(^(?:[\w]+[\'\-]?[\w]*[\'\-]?)+)|(^(?:[\$]?[\w]+[\'\-]?[\w]*)+))', '', text)
     regex = re.compile("[^.](.*?)[!.;?]")
     matches = regex.findall(text)
+    sentences = []
+    for match in matches:
 
-    return matches
-
+    return sentences
 
 if __name__ == '__main__':
     import sys
