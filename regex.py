@@ -1,13 +1,13 @@
 import re
 
 def clean(text):
-    remove = re.sub(r'(?:(?:(^[\w]+[\'\-]?[\w]*))|(^(?:[\w]+[\'\-]?[\w]*[\'\-]?)+)|(^(?:[\$]?[\w]+[\'\-]?[\w]*)+))', '', text)
-    sentence = re.compile("[^.](.*?)[!.;?]")
     # remove = re.sub(r'[^\w\'?\w\$\s]', '', text).split()
     # remove = re.sub(r'(^[\w\'?\w]*[\$\s])', '', text).split()
+    remove = re.sub(r'(?:(?:(^[\w]+[\'\-]?[\w]*))|(^(?:[\w]+[\'\-]?[\w]*[\'\-]?)+)|(^(?:[\$]?[\w]+[\'\-]?[\w]*)+))', '', text)
+    regex = re.compile("[^.](.*?)[!.;?]")
+    matches = regex.findall(text)
 
-
-    return sentence
+    return matches
 
 
 if __name__ == '__main__':
