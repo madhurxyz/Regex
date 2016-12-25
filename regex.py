@@ -16,11 +16,12 @@ def clean(text):
     # return sentences
     punctuations = '!()-[]{};:"\,<>./?@#$%^&*_~\x80\x98\x99\x94'
     no_punctuation = ''
-    for character in word_string:
-        no_punctuation = "wirte function here"
+    for character in text:
+        if character not in punctuations:
+            no_punctuation.append[character]
     return no_punctuation
 
-    
+
 if __name__ == '__main__':
     import sys
     filename = sys.argv[1]
