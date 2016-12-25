@@ -3,9 +3,6 @@ import re
 def clean(text):
     # remove = re.sub(r'[^\w\'?\w\$\s]', '', text).split()
     # remove = re.sub(r'(^[\w\'?\w]*[\$\s])', '', text).split()
-    # (?:(?:'([\wÀ-ÿ]+[\'\-]?[\wÀ-ÿ]*)')|((?:[\wÀ-ÿ]+[\'\-]?[\wÀ-ÿ]*[\'\-]?)+)|((?:['\$]?[\wÀ-ÿ]+[\'\-]?[\wÀ-ÿ]*)+))
-    #
-    # [^\wÀ-ÿ\'?\wÀ-ÿ\$\s]
     # remove = re.sub(r'(?:(?:(^[\w]+[\'\-]?[\w]*))|(^(?:[\w]+[\'\-]?[\w]*[\'\-]?)+)|(^(?:[\$]?[\w]+[\'\-]?[\w]*)+))', '', text)
     # regex = re.compile("[^.](.*?)[!.;?]")
     # matches = regex.findall(text)
@@ -18,7 +15,7 @@ def clean(text):
     no_punctuation = ''
     for character in text:
         if character not in punctuations:
-            no_punctuation.append[character]
+            no_punctuation += character
     return no_punctuation
 
 
